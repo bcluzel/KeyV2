@@ -4,16 +4,16 @@
 $key_length = 1.0; // Range not working in thingiverse customizer atm [1:0.25:16]
 
 // What type of stem you want. Most people want Cherry.
-$stem_type = "cherry";  // [cherry, alps, rounded_cherry, box_cherry, filled, disable]
+$stem_type = "choc";  // [cherry, alps, rounded_cherry, box_cherry, choc, filled, disable]
 
 // The stem is the hardest part to print, so this variable controls how much 'slop' there is in the stem
 // if your keycaps stick in the switch raise this value
-$stem_slop = 0.35; // Not working in thingiverse customizer atm [0:0.01:1]
+$stem_slop = 0; // Not working in thingiverse customizer atm [0:0.01:1]
 // broke this out. if your keycaps are falling off lower this value. only works for cherry stems rn
-$stem_inner_slop = 0.2;
+$stem_inner_slop = 0;
 
 // Font size used for text
-$font_size = 6;
+$font_size = 8;
 
 // Set this to true if you're making a spacebar!
 $inverted_dish = false;
@@ -27,7 +27,7 @@ $double_sculpt_radius = 200;
 $support_type = "flared"; // [flared, bars, flat, disable]
 
 // Supports for the stem, as it often comes off during printing. Reccommended for most machines
-$stem_support_type = "tines"; // [tines, brim, disabled]
+$stem_support_type = "disabled"; // [tines, brim, disabled]
 
 // make legends outset instead of inset.
 // broken off from artisan support since who wants outset legends?
@@ -41,24 +41,26 @@ $keytop_thickness = 1;
 // Wall thickness, aka the thickness of the sides of the keycap. note this is the total thickness, aka 3 = 1.5mm walls
 $wall_thickness = 3;
 // Radius of corners of keycap
-$corner_radius = 1;
+$corner_radius = 3;
 // Width of the very bottom of the key
+// $bottom_key_width = 17.5;
 $bottom_key_width = 18.16;
 // Height (from the front) of the very bottom of the key
+// $bottom_key_height = 16.5;
 $bottom_key_height = 18.16;
 // How much less width there is on the top. eg top_key_width = bottom_key_width - width_difference
-$width_difference = 6;
+$width_difference = 0;
 // How much less height there is on the top
-$height_difference = 4;
+$height_difference = 0;
 // How deep the key is, before adding a dish
-$total_depth = 11.5;
+$total_depth = 6;
 // The tilt of the dish in degrees. divided by key height
-$top_tilt = -6;
+$top_tilt = 0;
 // the y tilt of the dish in degrees. divided by key width.
 // for double axis sculpted keycaps and probably not much else
 $top_tilt_y = 0;
 // How skewed towards the back the top is (0 for center)
-$top_skew = 1.7;
+$top_skew = 0;
 
 // how skewed towards the right the top is. unused, but implemented.
 // for double axis sculpted keycaps and probably not much else
@@ -67,7 +69,7 @@ $top_skew_x = 0;
 /* [Stem] */
 
 // How far the throw distance of the switch is. determines how far the 'cross' in the cherry switch digs into the stem, and how long the keystem needs to be before supports can start. luckily, alps and cherries have a pretty similar throw. can modify to have stouter keycaps for low profile switches, etc
-$stem_throw = 4;
+$stem_throw = 3;
 // Diameter of the outside of the rounded cherry stem
 $rounded_cherry_stem_d = 5.5;
 
@@ -94,7 +96,7 @@ $height_slices = 1;
 /* [Dish] */
 
 // What type of dish the key has. note that unlike stems and supports a dish ALWAYS gets rendered.
-$dish_type = "cylindrical"; // [cylindrical, spherical, sideways cylindrical, old spherical, disable]
+$dish_type = "spherical"; // [cylindrical, spherical, sideways cylindrical, old spherical, disable]
 // How deep the dish 'digs' into the top of the keycap. this is max depth, so you can't find the height from total_depth - dish_depth. besides the top is skewed anyways
 $dish_depth = 1;
 // How skewed in the x direction the dish is
@@ -106,9 +108,9 @@ $dish_skew_y = 0;
 $dish_offset_x = 0;
 
 // If you need the dish to extend further, you can 'overdraw' the rectangle it will hit. this was mostly for iso enter and should be deprecated
-$dish_overdraw_width = 0;
+$dish_overdraw_width = -10;
 // Same as width but for height
-$dish_overdraw_height = 0;
+$dish_overdraw_height = -5;
 
 /* [Misc] */
 // There's a bevel on the cherry stems to aid insertion / guard against first layer squishing making a hard-to-fit stem.
@@ -117,7 +119,7 @@ $cherry_bevel = true;
 // How tall in mm the stem support is, if there is any. stem support sits around the keystem and helps to secure it while printing.
 $stem_support_height = .8;
 // Font used for text
-$font="DejaVu Sans Mono:style=Book";
+$font="Courier Prime Sans:style=Regular";
 // Whether or not to render fake keyswitches to check clearances
 $clearance_check = false;
 // Should be faster, also required for concave shapes
@@ -195,7 +197,7 @@ $shape_facets =30;
 
 
 // "flat" / "dished" / "disable"
-$inner_shape_type = "flat";
+$inner_shape_type = "dished";
 
 // default side_sculpting function, linear
 $side_sculpting = function(progress) 0;
