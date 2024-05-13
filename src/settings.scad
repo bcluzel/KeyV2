@@ -39,7 +39,7 @@ $key_height = 1.0;
 // Keytop thickness, aka how many millimeters between the inside and outside of the top surface of the key
 $keytop_thickness = 1;
 // Wall thickness, aka the thickness of the sides of the keycap. note this is the total thickness, aka 3 = 1.5mm walls
-$wall_thickness = 3;
+$wall_thickness = 2;
 // Radius of corners of keycap
 $corner_radius = 3;
 // Width of the very bottom of the key
@@ -53,7 +53,7 @@ $width_difference = 0;
 // How much less height there is on the top
 $height_difference = 0;
 // How deep the key is, before adding a dish
-$total_depth = 6;
+$total_depth = 5;
 // The tilt of the dish in degrees. divided by key height
 $top_tilt = 0;
 // the y tilt of the dish in degrees. divided by key width.
@@ -162,7 +162,7 @@ $front_legends = [];
 $front_print_legends = false;
 
 // how recessed inset legends / artisans are from the top of the key
-$inset_legend_depth = 0.2;
+$inset_legend_depth = 0.3;
 
 // Dimensions of alps stem
 $alps_stem = [4.45, 2.25];
