@@ -6,9 +6,11 @@
 // special variables, but that's a limitation of SCAD we have to work around
 
 include <./includes.scad>
-$using_customizer = false;
+
+$key_label = "A";
+
 // example key
-legend("A") key();
+legend($key_label) key();
 
 // example row
 /* for (x = [0:1:4]) {
