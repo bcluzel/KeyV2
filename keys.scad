@@ -7,10 +7,10 @@
 
 include <./includes.scad>
 
-$key_label = "A";
+key_label = "A";
 
 // example key
-legend($key_label) key();
+legend(key_label) key();
 
 // example row
 /* for (x = [0:1:4]) {
