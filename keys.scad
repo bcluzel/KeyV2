@@ -6,7 +6,7 @@
 // special variables, but that's a limitation of SCAD we have to work around
 
 include <./includes.scad>
-
+$using_customizer = false;
 // example key
 legend("A") key();
 
