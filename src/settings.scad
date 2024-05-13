@@ -192,8 +192,8 @@ $warning_color = [1,0,0, 0.15];
 
 // how many facets circles will have when used in these features
 $minkowski_facets = 30;
-$shape_facets =30;
-
+$shape_facets = 180;
+$fn = 180;
 
 
 // "flat" / "dished" / "disable"
